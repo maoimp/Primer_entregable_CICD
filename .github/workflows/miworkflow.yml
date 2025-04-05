@@ -1,7 +1,7 @@
 name: workflow1  # 1. Dale un nombre descriptivo a tu workflow
 
 on:
-  push: # 2. ¿Qué evento(s) quieres usar para disparar este workflow? (añade mínimo 2)
+  workflow_dispatch: # 2. ¿Qué evento(s) quieres usar para disparar este workflow? (añade mínimo 2)
         #    Piensa en cuándo quieres que se ejecute (push, pull_request, manualmente...).
     branches : # 2b. (Opcional) ¿Quieres restringirlo a alguna rama específica?
       - main
@@ -27,4 +27,4 @@ jobs:
           python-version: 3.8 # 6. Elige una versión de Python (ej: '3.8', '3.9', '3.10', '3.11', '3.12').
 
       - name: Ejecutar script Python
-        run: ??? #7. Completa para ejecutar el script de python. Pista: python <nombre_archivo>
+        run: python mi_script.py #7. Completa para ejecutar el script de python. Pista: python <nombre_archivo>
